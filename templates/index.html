@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <title>Stock Prediction</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar_logo">
+            <img src="{{ url_for('static', filename='assets/stocklylogo.png') }}" alt="Stockly Logo">
+            <a href="" class="navbar_icon">Stockly</a>
+        </div>
+        <div class="navbar_content">
+            <a class="content">Home</a>
+            <a class="content">|</a>
+            <a class="content">About Us</a>
+        </div>
+    </div>
+
+    <div class="upper_bar">
+        <div class="greetings">
+            <a>Welcome to Stockly</a>
+        </div>
+        <div class="upper_wrap">
+            <div class="dropdown">
+                <div class="dropdown-container">
+                <select id="Select_stock">
+                    <option value="" disabled selected>Select stock</option>
+                    <option value="AAPL">Apple (AAPL)</option>
+                    <option value="BBCA">BCA (BBCA)</option>
+                    <option value="BBRI.JK">BRI (BBRI)</option>
+                </select>
+            </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="middle_bar">
+        <div class="stock_status">
+            <img src="{{ url_for('static', filename='assets/stocklylogo.png') }}" alt="Stock Logo" class="stock_logo">
+            <span class="stock_name"></span>
+            <div class="user_inpt">
+                <!-- Start Date -->
+                <label for="start_date">Start Date:</label>
+                <input type="date" id="start_date" name="start_date">
+                <!-- Time Interval Dropdown -->
+                <label for="time_interval">Forecast Interval:</label>
+                <select id="time_interval" name="time_interval">
+                    <option value="270">9 Months</option>
+                    <option value="365">1 Year</option>
+                    <option value="730">2 Years</option>
+                    <option value="1825">5 Years</option>
+                </select>
+            <!-- Predict Button -->
+                <button id="predictButton">Predict</button>
+            </div>
+        </div>
+    </div>
+    <!-- Prediction Chart -->
+    <div class="prediction-chart">
+        <img id="predictionPlot" src="{{ url_for('predict', ticker='', start_date='', end_date='', forecast_days=365) }}" alt="Stock Price Prediction">
+    </div>
+</body>
+</html>

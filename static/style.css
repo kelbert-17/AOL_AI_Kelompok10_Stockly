@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    background-color: #ffffff;
+    /* overflow-x: hidden; */
+}
+
+@font-face {
+    font-family: 'Mako';
+    src: url(static/assets/mako_font/Mako-Regular.ttf) format('woff2');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+.custom-font {
+    font-family: 'Mako', sans-serif;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0a0a0a;
+    padding: 0vh 5vh;
+    border: 2px solid #0a0a0a;
+    /* box-shadow: 0.5vh 0.5vh 1vh 0.5vh #111111; */
+    z-index: 2;
+}
+
+.navbar_logo img{
+    width: 3.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.3rem;
+}
+
+.navbar_logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar_logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 3.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.navbar_content a {
+    padding-top: 0.5rem;
+    font-family: 'Mako';
+    color: white;
+    text-decoration: none;
+    font-size: 2vw;
+    margin-right: 2vw;
+    transition: color 0.3s ease;
+}
+
+.upper_bar{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    border-bottom: solid 2px #999;
+}
+
+.upper_bar a{
+    font-family: 'Mako';
+    font-size: 2.4rem;
+    padding-left: 5rem;
+}
+
+.upper_wrap{
+    justify-content: space-between;
+    display: flex;
+}
+
+.dropdown{
+    padding-right: 5rem;
+}
+
+select {
+    width: 12rem;
+    padding: 5px;
+    font-size: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #cecece;
+    appearance: none; /* Hides the default dropdown arrow */
+}
+
+option[disabled] {
+    color: #999; /* Grayed-out for the placeholder */
+}
+
+.hamburger-container {
+    cursor: pointer;
+    padding-right: 5rem;
+}
+
+.hamburger-container img {
+    display: flex;
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+}
+
+.hidden {
+    width: 15rem;
+    right: 5rem;
+    top: 10rem;
+    position: absolute;
+    background-color: #444;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially hidden */
+}
+
+.hidden ul {    
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hidden ul li {
+    margin: 10px 0;
+}
+
+.hidden ul li a {
+    padding: 0;
+    padding-left: 1rem;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+    font-size: 2rem;
+}
+
+.hidden ul li a:hover {
+    color: #ff9800;
+}
+
+/* Show Menu when active */
+.hidden.visible {
+    display: block;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.stock_name{
+    font-size: 5rem;
+    padding-left: 3rem;
+    /* margin-bottom: 5rem; */
+}
+
+.bar {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.middle_bar{
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.middle_bar .bbri-logo{
+    width: 10rem;
+    padding-left: 5rem;
+}
+
+.middle_bar .bbca-logo{
+    padding-left: 4rem;
+}
+
+.middle_bar .default-logo{
+    filter: invert(100%);
+}
+
+.stock_logo{
+    width: 15rem;
+    padding-left: 5rem;
+}
+
+.middle_bar .user_inpt{
+    padding-left: 5rem;
+}
+
+
+.prediction-chart img{
+    padding-top: 2rem;
+    width: 50%;
+    padding-left: 5rem;
+}
